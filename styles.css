@@ -1,0 +1,130 @@
+/* styles.css - Victoria-Kirst style imitation, adapted for Abdumalik */
+
+:root{
+    --bg: #4a4a42;       /* page background accent */
+    --panel: #5b5b52;    /* card background */
+    --text: #e9e8e2;     /* main text */
+    --muted: #cfcfc6;    /* muted text */
+    --accent: #9bd0ff;   /* bluish accent for headings */
+    --link: #ffd68a;     /* link color */
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+    background: linear-gradient(180deg, #3a3a3a 0%, #2f2f2f 100%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+.page {
+    max-width: 900px;
+    margin: 28px auto;
+    border: 1px solid rgba(255,255,255,0.03);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+/* Header like example: big title with block background */
+.hero {
+    background: #4b4a44;
+    padding: 28px 26px;
+    border-bottom: 3px solid rgba(0,0,0,0.25);
+}
+.hero h1 {
+    margin: 0 0 8px 0;
+    font-size: 40px;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+}
+.hero .lead {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* main content */
+.content {
+    padding: 18px 22px;
+}
+
+/* card (each section) */
+.card {
+    padding: 14px 6px 20px 6px;
+    margin-bottom: 6px;
+    background: transparent;
+}
+.card h2 {
+    margin: 0 0 6px 0;
+    color: var(--accent);
+    font-size: 18px;
+}
+.card hr {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 8px 0 12px 0;
+}
+
+ul, ol {
+    padding-left: 18px;
+    color: var(--text);
+}
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Moods / images */
+.moods .mood-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.mood {
+    background: #57524a;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+}
+.mood figcaption {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-weight: 600;
+}
+.mood img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* footer */
+.site-footer {
+    padding: 12px 20px;
+    background: #3f3f39;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    color: var(--muted);
+    text-align: left;
+}
+.site-footer .badges img {
+    height: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 740px) {
+    .hero h1 { font-size: 28px; }
+    .moods .mood-row { flex-direction: column; }
+    .mood { width: 100%; }
+    .page { margin: 12px; }
+}
